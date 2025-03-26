@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Aeq.CoreMvc</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Aeq.CoreMvc.EntityFrameworkCore\Aeq.CoreMvc.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\Aeq.CoreMvc.Application.Tests\Aeq.CoreMvc.Application.Tests.csproj" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="9.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1.0" />
+  </ItemGroup>
+
+</Project>

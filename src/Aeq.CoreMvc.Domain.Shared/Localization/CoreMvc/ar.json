@@ -1,0 +1,24 @@
+{
+  "culture": "ar",
+  "texts": {
+    "AppName": "CoreMvc",
+    "Menu:Home": "الصفحة الرئيسية",
+    "Welcome": "مرحباً",
+    "LongWelcomeMessage": "مرحبا بكم في التطبيق. هذا مشروع بدء تشغيل يعتمد على إطار عمل ABP. لمزيد من المعلومات ، يرجى زيارة abp.io.",
+    "Permission:Book": "Book",
+    "Permission:Create": "Create",
+    "Permission:Update": "Update",
+    "Permission:Delete": "Delete",
+    "Menu:Book": "MenuBook",
+    "Book": "Book",
+    "BookName": "BookName",
+    "BookType": "BookType",
+    "BookDescription": "BookDescription",
+    "BookPublishDate": "BookPublishDate",
+    "CreateBook": "CreateBook",
+    "EditBook": "EditBook",
+    "BookDeletionConfirmationMessage": "Are you sure to delete the book {0}?",
+    "SuccessfullyDeleted": "Successfully deleted",
+    "TableFilter": "TableFilter"
+  }
+}
