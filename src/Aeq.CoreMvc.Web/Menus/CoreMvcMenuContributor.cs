@@ -54,5 +54,11 @@ public class CoreMvcMenuContributor : IMenuContributor
                 new ApplicationMenuItem(CoreMvcMenus.Book, l["Menu:Book"], "/Books/Book")
             );
         }
+        if (await context.IsGrantedAsync(CoreMvcPermissions.Author.Default))
+        {
+            context.Menu.GetAdministration().AddItem(
+                new ApplicationMenuItem(CoreMvcMenus.Author, l["Menu:Author"], "/Books/Author")
+            );
+        }
     }
 }

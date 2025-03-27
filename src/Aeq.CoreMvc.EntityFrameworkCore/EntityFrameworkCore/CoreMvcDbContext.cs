@@ -55,6 +55,7 @@ public class CoreMvcDbContext :
 
     #endregion
     public DbSet<Book> Books { get; set; }
+    public DbSet<Author> Authors { get; set; }
 
     public CoreMvcDbContext(DbContextOptions<CoreMvcDbContext> options)
         : base(options)
@@ -90,6 +91,16 @@ public class CoreMvcDbContext :
         builder.Entity<Book>(b =>
         {
             b.ToTable(CoreMvcConsts.DbTablePrefix + "Books", CoreMvcConsts.DbSchema);
+            b.ConfigureByConvention(); 
+            
+
+            /* Configure more properties here */
+        });
+
+
+        builder.Entity<Author>(b =>
+        {
+            b.ToTable(CoreMvcConsts.DbTablePrefix + "Authors", CoreMvcConsts.DbSchema);
             b.ConfigureByConvention(); 
             
 

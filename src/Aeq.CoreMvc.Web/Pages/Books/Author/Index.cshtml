@@ -1,0 +1,51 @@
+@page
+@using Aeq.CoreMvc.Permissions
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using Aeq.CoreMvc.Web.Pages.Books.Author
+@using Aeq.CoreMvc.Localization
+@using Aeq.CoreMvc.Web.Menus
+@model IndexModel
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<CoreMvcResource> L
+@inject IAuthorizationService Authorization
+@{
+    PageLayout.Content.Title = L["Author"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:Author"].Value);
+    PageLayout.Content.MenuItemName = CoreMvcMenus.Author;
+}
+
+@section scripts
+{
+    <abp-script src="/Pages/Books/Author/index.js" />
+}
+@section styles
+{
+    <abp-style src="/Pages/Books/Author/index.css"/>
+}
+@section content_toolbar
+{
+	@if (await Authorization.IsGrantedAsync(CoreMvcPermissions.Author.Create))
+    {
+        <abp-button id="NewAuthorButton"
+            text="@L["CreateAuthor"].Value"
+            icon="plus" size="Small"
+            button-type="Primary" />
+    }
+}
+
+<abp-card>
+    <abp-card-body>
+        <abp-row class="mb-3">
+            <a abp-collapse-id="AuthorCollapse" class="text-secondary">@L["TableFilter"] </a>
+        </abp-row>
+        <abp-dynamic-form abp-model="AuthorFilter" id="AuthorFilter" required-symbols="false" column-size="_3">
+            <abp-collapse-body id="AuthorCollapse">
+                <abp-form-content />
+            </abp-collapse-body>
+        </abp-dynamic-form>
+        <hr />
+        <abp-table striped-rows="true" id="AuthorTable" class="nowrap"/>
+    </abp-card-body>
+</abp-card>

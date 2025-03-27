@@ -19,6 +19,15 @@
     "EditBook": "EditBook",
     "BookDeletionConfirmationMessage": "Are you sure to delete the book {0}?",
     "SuccessfullyDeleted": "Successfully deleted",
-    "TableFilter": "TableFilter"
+    "TableFilter": "TableFilter",
+    "Permission:Author": "Author",
+    "Menu:Author": "MenuAuthor",
+    "Author": "Author",
+    "AuthorName": "AuthorName",
+    "AuthorPhoneNumber": "AuthorPhoneNumber",
+    "AuthorEmail": "AuthorEmail",
+    "CreateAuthor": "CreateAuthor",
+    "EditAuthor": "EditAuthor",
+    "AuthorDeletionConfirmationMessage": "Are you sure to delete the author {0}?"
   }
 }

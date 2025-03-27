@@ -8,4 +8,5 @@ public class CoreMvcMenus
     //Add your menu items here...
 
     public const string Book = Prefix + ".Book";
+    public const string Author = Prefix + ".Author";
 }

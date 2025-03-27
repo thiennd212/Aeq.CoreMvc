@@ -43,6 +43,7 @@ public class CoreMvcEntityFrameworkCoreModule : AbpModule
                  * default repositories only for aggregate roots */
             options.AddDefaultRepositories(includeAllEntities: true);
             options.AddRepository<Book, BookRepository>();
+            options.AddRepository<Author, AuthorRepository>();
         });
 
         Configure<AbpDbContextOptions>(options =>

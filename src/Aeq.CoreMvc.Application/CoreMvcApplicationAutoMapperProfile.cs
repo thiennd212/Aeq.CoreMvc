@@ -13,5 +13,7 @@ public class CoreMvcApplicationAutoMapperProfile : Profile
          * into multiple profile classes for a better organization. */
         CreateMap<Book, BookDto>();
         CreateMap<CreateUpdateBookDto, Book>(MemberList.Source);
+        CreateMap<Author, AuthorDto>();
+        CreateMap<CreateUpdateAuthorDto, Author>(MemberList.Source);
     }
 }

@@ -13,4 +13,11 @@ public static class CoreMvcPermissions
         public const string Create = Default + ".Create";
         public const string Delete = Default + ".Delete";
     }
+    public class Author
+    {
+        public const string Default = GroupName + ".Author";
+        public const string Update = Default + ".Update";
+        public const string Create = Default + ".Create";
+        public const string Delete = Default + ".Delete";
+    }
 }

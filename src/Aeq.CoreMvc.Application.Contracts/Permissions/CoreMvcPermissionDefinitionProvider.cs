@@ -16,6 +16,11 @@ public class CoreMvcPermissionDefinitionProvider : PermissionDefinitionProvider
         bookPermission.AddChild(CoreMvcPermissions.Book.Create, L("Permission:Create"));
         bookPermission.AddChild(CoreMvcPermissions.Book.Update, L("Permission:Update"));
         bookPermission.AddChild(CoreMvcPermissions.Book.Delete, L("Permission:Delete"));
+
+        var authorPermission = myGroup.AddPermission(CoreMvcPermissions.Author.Default, L("Permission:Author"));
+        authorPermission.AddChild(CoreMvcPermissions.Author.Create, L("Permission:Create"));
+        authorPermission.AddChild(CoreMvcPermissions.Author.Update, L("Permission:Update"));
+        authorPermission.AddChild(CoreMvcPermissions.Author.Delete, L("Permission:Delete"));
     }
 
     private static LocalizableString L(string name)
